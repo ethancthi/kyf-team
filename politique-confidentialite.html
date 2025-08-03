@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité - Know You'r Fear</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques pour la politique de confidentialité */
+        .privacy-hero {
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+            padding: 8rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .privacy-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(139, 0, 0, 0.1) 0%, transparent 70%);
+            animation: heroGlow 8s ease-in-out infinite;
+        }
+
+        .privacy-title {
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px var(--hover-glow);
+            position: relative;
+            z-index: 2;
+        }
+
+        .privacy-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .privacy-content {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            border: 1px solid rgba(139, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            line-height: 1.8;
+        }
+
+        .privacy-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(139, 0, 0, 0.05), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .privacy-content:hover::before {
+            left: 100%;
+        }
+
+        .privacy-section {
+            margin-bottom: 3rem;
+        }
+
+        .privacy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .privacy-section h2 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .privacy-section h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 20px;
+            background: linear-gradient(180deg, var(--accent-color), var(--accent-light));
+            border-radius: 2px;
+        }
+
+        .privacy-section h3 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        .privacy-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .privacy-section ul {
+            color: var(--text-secondary);
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy-section strong {
+            color: var(--text-primary);
+        }
+
+        .privacy-contact {
+            background: rgba(139, 0, 0, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .privacy-contact h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+
+        .privacy-email {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .privacy-email:hover {
+            text-shadow: 0 0 10px var(--hover-glow);
+            filter: brightness(1.2);
+        }
+
+        .privacy-highlight {
+            background: rgba(139, 0, 0, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(139, 0, 0, 0.2);
+            margin: 1.5rem 0;
+        }
+
+        .privacy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .privacy-table th,
+        .privacy-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(139, 0, 0, 0.1);
+        }
+
+        .privacy-table th {
+            background: rgba(139, 0, 0, 0.1);
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .privacy-table td {
+            color: var(--text-secondary);
+        }
+
+        .privacy-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--accent-color), var(--accent-light));
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: var(--transition);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .back-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .back-button:hover::before {
+            left: 100%;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(139, 0, 0, 0.3);
+        }
+
+        .back-arrow {
+            transition: var(--transition);
+        }
+
+        .back-button:hover .back-arrow {
+            transform: translateX(-3px);
+        }
+
+        .data-retention-card {
+            background: rgba(40, 167, 69, 0.05);
+            border-left: 4px solid var(--success-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .security-card {
+            background: rgba(255, 193, 7, 0.05);
+            border-left: 4px solid var(--warning-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .right-card {
+            background: rgba(139, 0, 0, 0.05);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(139, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .right-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(139, 0, 0, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        .right-card h4 {
+            color: var(--accent-color);
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .right-icon {
+            font-size: 1.2rem;
+        }
+
+        .right-card p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .privacy-title {
+                font-size: 2.5rem;
+            }
+
+            .privacy-content {
+                padding: 2rem;
+                margin: 2rem 0;
+            }
+
+            .privacy-section h2 {
+                font-size: 1.3rem;
+            }
+
+            .privacy-contact {
+                padding: 1.5rem;
+            }
+
+            .rights-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .privacy-table {
+                font-size: 0.9rem;
+            }
+
+            .privacy-table th,
+            .privacy-table td {
+                padding: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .privacy-hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .privacy-title {
+                font-size: 2rem;
+            }
+
+            .privacy-content {
+                padding: 1.5rem;
+            }
+
+            .privacy-section ul {
+                margin-left: 1.5rem;
+            }
+
+            .privacy-table {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Know You'r Fear</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#team">Équipe</a></li>
+                <li><a href="index.html#roadmap">Roadmap</a></li>
+                <li><a href="index.html#resources">Ressources</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="cdg.html">Cahiers des charges</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="privacy-hero">
+        <div class="hero-particles"></div>
+        <div class="hero-fog"></div>
+        <div class="container">
+            <h1 class="privacy-title">Politique de Confidentialité</h1>
+            <p class="privacy-subtitle">Protection et gestion de vos données personnelles sur le site Know You'r Fear</p>
+        </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <section class="section">
+        <div class="container">
+            <a href="index.html" class="back-button">
+                <span class="back-arrow">←</span>
+                Retour à l'accueil
+            </a>
+
+            <div class="privacy-content">
+                <div class="privacy-section">
+                    <h2>1. Introduction</h2>
+                    <p>La présente politique de confidentialité décrit comment <strong>KYF Team (Know You'r Fear Team)</strong> collecte, utilise, stocke et protège vos données personnelles lors de votre visite sur notre site web.</p>
+                    
+                    <div class="privacy-highlight">
+                        <p><strong>Engagement de confidentialité :</strong> Nous nous engageons à protéger votre vie privée et à traiter vos données personnelles de manière transparente, conforme au Règlement Général sur la Protection des Données (RGPD) et aux lois françaises en vigueur.</p>
+                    </div>
+
+                    <div class="privacy-contact">
+                        <h3>Responsable du traitement</h3>
+                        <p><strong>KYF Team</strong></p>
+                        <p><strong>Email :</strong> <a href="mailto:contact@kyf-team.com" class="privacy-email">contact@kyf-team.com</a></p>
+                        <p><strong>Contact DPO :</strong> <a href="mailto:dpo@kyf-team.com" class="privacy-email">dpo@kyf-team.com</a></p>
+                    </div>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>2. Données collectées</h2>
+                    
+                    <h3>2.1 Données collectées automatiquement</h3>
+                    <p>Lors de votre navigation sur notre site, les données suivantes peuvent être collectées automatiquement :</p>
+                    
+                    <table class="privacy-table">
+                        <thead>
+                            <tr>
+                                <th>Type de donnée</th>
+                                <th>Finalité</th>
+                                <th>Base légale</th>
+                                <th>Durée de conservation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Adresse IP</td>
+                                <td>Sécurité, statistiques</td>
+                                <td>Intérêt légitime</td>
+                                <td>12 mois</td>
+                            </tr>
+                            <tr>
+                                <td>Type de navigateur</td>
+                                <td>Optimisation technique</td>
+                                <td>Intérêt légitime</td>
+                                <td>12 mois</td>
+                            </tr>
+                            <tr>
+                                <td>Pages visitées</td>
+                                <td>Amélioration du site</td>
+                                <td>Intérêt légitime</td>
+                                <td>24 mois</td>
+                            </tr>
+                            <tr>
+                                <td>Durée de visite</td>
+                                <td>Analyse d'audience</td>
+                                <td>Intérêt légitime</td>
+                                <td>24 mois</td>
+                            </tr>
+                            <tr>
+                                <td>Données de géolocalisation (pays/région)</td>
+                                <td>Statistiques géographiques</td>
+                                <td>Intérêt légitime</td>
+                                <td>12 mois</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>2.2 Données collectées via Discord</h3>
+                    <p>Si vous rejoignez notre serveur Discord :</p>
+                    <ul>
+                        <li>Nom d'utilisateur Discord</li>
+                        <li>Avatar public</li>
+                        <li>Messages publics dans les canaux</li>
+                        <li>Interactions avec le bot du serveur (si applicable)</li>
+                    </ul>
+                    <p><strong>Note :</strong> Ces données sont soumises à la politique de confidentialité de Discord Inc.</p>
+
+                    <h3>2.3 Données que nous ne collectons PAS</h3>
+                    <div class="security-card">
+                        <p><strong>Protection renforcée :</strong> Nous ne collectons ni ne stockons :</p>
+                        <ul>
+                            <li>Données sensibles (origine ethnique, opinions politiques, etc.)</li>
+                            <li>Données bancaires ou de paiement</li>
+                            <li>Mots de passe ou données de connexion</li>
+                            <li>Données biométriques</li>
+                            <li>Enregistrements audio ou vidéo sans consentement explicite</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>3. Finalités du traitement</h2>
+                    <p>Vos données personnelles sont traitées pour les finalités suivantes :</p>
+                    
+                    <h3>3.1 Fonctionnement du site</h3>
+                    <ul>
+                        <li>Assurer le bon fonctionnement technique du site</li>
+                        <li>Optimiser les performances et la compatibilité</li>
+                        <li>Détecter et prévenir les erreurs techniques</li>
+                    </ul>
+
+                    <h3>3.2 Sécurité</h3>
+                    <ul>
+                        <li>Prévenir les attaques informatiques</li>
+                        <li>Détecter les tentatives d'accès frauduleux</li>
+                        <li>Assurer la sécurité des données</li>
+                    </ul>
+
+                    <h3>3.3 Amélioration de l'expérience utilisateur</h3>
+                    <ul>
+                        <li>Analyser l'utilisation du site (pages populaires, temps de visite)</li>
+                        <li>Améliorer l'ergonomie et le contenu</li>
+                        <li>Adapter le site aux différents appareils</li>
+                    </ul>
+
+                    <h3>3.4 Communication</h3>
+                    <ul>
+                        <li>Répondre aux demandes de contact</li>
+                        <li>Informer sur l'évolution du projet (avec consentement)</li>
+                        <li>Gérer la communauté Discord</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>4. Base légale du traitement</h2>
+                    <p>Nos traitements de données personnelles sont basés sur :</p>
+                    
+                    <h3>4.1 Intérêt légitime (Art. 6.1.f RGPD)</h3>
+                    <ul>
+                        <li>Assurer la sécurité et le fonctionnement du site</li>
+                        <li>Améliorer nos services et l'expérience utilisateur</li>
+                        <li>Réaliser des statistiques anonymisées</li>
+                    </ul>
+
+                    <h3>4.2 Consentement (Art. 6.1.a RGPD)</h3>
+                    <ul>
+                        <li>Newsletter et communications marketing (si applicable)</li>
+                        <li>Cookies non essentiels (si utilisés)</li>
+                        <li>Participation à des enquêtes ou tests</li>
+                    </ul>
+
+                    <h3>4.3 Exécution contractuelle (Art. 6.1.b RGPD)</h3>
+                    <ul>
+                        <li>Fourniture des services demandés</li>
+                        <li>Gestion des comptes utilisateur (si applicable)</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>5. Partage des données</h2>
+                    
+                    <div class="privacy-highlight">
+                        <p><strong>Principe :</strong> Nous ne vendons, ne louons, ni ne partageons vos données personnelles avec des tiers à des fins commerciales.</p>
+                    </div>
+
+                    <h3>5.1 Partages autorisés</h3>
+                    <p>Vos données peuvent être partagées uniquement dans les cas suivants :</p>
+                    <ul>
+                        <li><strong>Prestataires techniques :</strong> Hébergeur web, services d'analyse (avec garanties de protection)</li>
+                        <li><strong>Obligations légales :</strong> Autorités compétentes sur réquisition judiciaire</li>
+                        <li><strong>Protection des droits :</strong> Défense de nos droits légitimes ou de ceux d'autrui</li>
+                    </ul>
+
+                    <h3>5.2 Transferts internationaux</h3>
+                    <p>Si des données sont transférées hors UE, nous garantissons un niveau de protection adéquat via :</p>
+                    <ul>
+                        <li>Décisions d'adéquation de la Commission européenne</li>
+                        <li>Clauses contractuelles types</li>
+                        <li>Certification ou codes de conduite approuvés</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>6. Conservation des données</h2>
+                    
+                    <div class="data-retention-card">
+                        <h3>Durées de conservation</h3>
+                        <p>Nous conservons vos données personnelles uniquement pendant la durée nécessaire aux finalités pour lesquelles elles ont été collectées :</p>
+                    </div>
+
+                    <table class="privacy-table">
+                        <thead>
+                            <tr>
+                                <th>Type de donnée</th>
+                                <th>Durée de conservation</th>
+                                <th>Critère de suppression</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Logs de connexion</td>
+                                <td>12 mois</td>
+                                <td>Obligation légale</td>
+                            </tr>
+                            <tr>
+                                <td>Données de navigation</td>
+                                <td>24 mois</td>
+                                <td>Intérêt statistique</td>
+                            </tr>
+                            <tr>
+                                <td>Demandes de contact</td>
+                                <td>3 ans</td>
+                                <td>Fin de la relation</td>
+                            </tr>
+                            <tr>
+                                <td>Données Discord</td>
+                                <td>Durée de participation</td>
+                                <td>Sortie du serveur</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>À l'expiration de ces délais, les données sont automatiquement supprimées ou anonymisées.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>7. Sécurité des données</h2>
+                    
+                    <div class="security-card">
+                        <h3>Mesures de sécurité techniques et organisationnelles</h3>
+                        <p>Nous mettons en œuvre des mesures appropriées pour protéger vos données :</p>
+                    </div>
+
+                    <h3>7.1 Sécurité technique</h3>
+                    <ul>
+                        <li>Chiffrement des données en transit (HTTPS/TLS)</li>
+                        <li>Authentification sécurisée</li>
+                        <li>Sauvegrdes régulières et sécurisées</li>
+                        <li>Mise à jour régulière des systèmes de sécurité</li>
+                        <li>Surveillance des accès et des intrusions</li>
+                    </ul>
+
+                    <h3>7.2 Sécurité organisationnelle</h3>
+                    <ul>
+                        <li>Accès aux données limité aux personnes autorisées</li>
+                        <li>Formation de l'équipe aux bonnes pratiques</li>
+                        <li>Procédures de gestion des incidents</li>
+                        <li>Audits réguliers de sécurité</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>8. Vos droits</h2>
+                    <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
+                    
+                    <div class="rights-grid">
+                        <div class="right-card">
+                            <h4><span class="right-icon">👁️</span> Droit d'accès</h4>
+                            <p>Obtenir confirmation du traitement de vos données et accéder à celles-ci</p>
+                        </div>
+                        
+                        <div class="right-card">
+                            <h4><span class="right-icon">✏️</span> Droit de rectification</h4>
+                            <p>Faire corriger les données inexactes ou incomplètes</p>
+                        </div>
+                        
+                        <div class="right-card">
+                            <h4><span class="right-icon">🗑️</span> Droit à l'effacement</h4>
+                            <p>Demander la suppression de vos données dans certains cas</p>
+                        </div>
+                        
+                        <div class="right-card">
+                            <h4><span class="right-icon">⏸️</span> Droit à la limitation</h4>
+                            <p>Restreindre le traitement de vos données</p>
+                        </div>
+                        
+                        <div class="right-card">
+                            <h4><span class="right-icon">📦</span> Droit à la portabilité</h4>
+                            <p>Récupérer vos données dans un format lisible</p>
+                        </div>
+                        
+                        <div class="right-card">
+                            <h4><span class="right-icon">🚫</span> Droit d'opposition</h4>
+                            <p>Vous opposer au traitement pour des raisons légitimes</p>
+                        </div>
+                    </div>
+
+                    <h3>8.1 Comment exercer vos droits</h3>
+                    <div class="privacy-contact">
+                        <p>Pour exercer vos droits, contactez-nous à :</p>
+                        <p><strong>Email :</strong> <a href="mailto:dpo@kyf-team.com" class="privacy-email">dpo@kyf-team.com</a></p>
+                        <p><strong>Délai de réponse :</strong> 30 jours maximum</p>
+                        <p><strong>Pièces à fournir :</strong> Justificatif d'identité pour sécuriser votre demande</p>
+                    </div>
+
+                    <h3>8.2 Droit de réclamation</h3>
+                    <p>Vous avez le droit d'introduire une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) si vous estimez que le traitement de vos données personnelles constitue une violation du RGPD.</p>
+                    <p><strong>CNIL :</strong> <a href="https://www.cnil.fr" target="_blank" class="privacy-email">www.cnil.fr</a></p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>9. Cookies et technologies similaires</h2>
+                    
+                    <h3>9.1 Types de cookies utilisés</h3>
+                    <table class="privacy-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Finalité</th>
+                                <th>Durée</th>
+                                <th>Consentement requis</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cookies techniques</td>
+                                <td>Fonctionnement du site</td>
+                                <td>Session</td>
+                                <td>Non</td>
+                            </tr>
+                            <tr>
+                                <td>Cookies de performance</td>
+                                <td>Optimisation du site</td>
+                                <td>12 mois</td>
+                                <td>Oui</td>
+                            </tr>
+                            <tr>
+                                <td>Cookies analytiques</td>
+                                <td>Statistiques d'usage</td>
+                                <td>24 mois</td>
+                                <td>Oui</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>9.2 Gestion des cookies</h3>
+                    <p>Vous pouvez gérer vos préférences de cookies :</p>
+                    <ul>
+                        <li>Via les paramètres de votre navigateur</li>
+                        <li>En utilisant notre bandeau de consentement (si présent)</li>
+                        <li>En nous contactant pour des demandes spécifiques</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>10. Modifications de la politique</h2>
+                    <p>Cette politique de confidentialité peut être modifiée pour s'adapter aux évolutions légales, techniques ou de nos services.</p>
+                    
+                    <h3>10.1 Notification des modifications</h3>
+                    <ul>
+                        <li>Les modifications importantes feront l'objet d'une notification sur le site</li>
+                        <li>La date de dernière mise à jour est indiquée en bas de cette page</li>
+                        <li>Les modifications substantielles peuvent nécessiter un nouveau consentement</li>
+                    </ul>
+
+                    <h3>10.2 Historique des versions</h3>
+                    <p>Nous conservons un historique des versions précédentes de cette politique, disponible sur demande.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>11. Contact et réclamations</h2>
+                    
+                    <div class="privacy-contact">
+                        <h3>Délégué à la Protection des Données (DPO)</h3>
+                        <p><strong>Email :</strong> <a href="mailto:dpo@kyf-team.com" class="privacy-email">dpo@kyf-team.com</a></p>
+                        <p><strong>Réponse garantie :</strong> sous 30 jours</p>
+                        <p><strong>Disponibilité :</strong> Du lundi au vendredi, 9h-18h</p>
+                    </div>
+
+                    <h3>11.1 Types de demandes traitées</h3>
+                    <ul>
+                        <li>Exercice des droits RGPD</li>
+                        <li>Questions sur le traitement de vos données</li>
+                        <li>Signalement d'incidents de sécurité</li>
+                        <li>Demandes de clarification sur cette politique</li>
+                    </ul>
+
+                    <h3>11.2 Procédure de réclamation interne</h3>
+                    <div class="security-card">
+                        <p><strong>Étapes de traitement :</strong></p>
+                        <ol>
+                            <li>Réception et accusé de réception (48h)</li>
+                            <li>Analyse et investigation (15 jours)</li>
+                            <li>Réponse motivée (30 jours maximum)</li>
+                            <li>Suivi et mise en œuvre des mesures correctives</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>12. Dispositions spéciales</h2>
+                    
+                    <h3>12.1 Mineurs</h3>
+                    <div class="privacy-highlight">
+                        <p><strong>Protection renforcée :</strong> Si vous avez moins de 16 ans, l'accord de vos parents ou tuteurs légaux est requis pour certains traitements de données. Nous prenons des mesures spécifiques pour protéger les données des mineurs.</p>
+                    </div>
+
+                    <h3>12.2 Données sensibles</h3>
+                    <p>Nous ne collectons pas intentionnellement de données sensibles. Si de telles données nous étaient transmises par erreur, elles seraient immédiatement supprimées.</p>
+
+                    <h3>12.3 Traitement automatisé et profilage</h3>
+                    <p>Nous n'effectuons pas de prise de décision automatisée ou de profilage ayant des effets juridiques ou significatifs sur les utilisateurs.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>13. Situation d'urgence</h2>
+                    
+                    <h3>13.1 Violation de données</h3>
+                    <p>En cas de violation de données personnelles :</p>
+                    <ul>
+                        <li>Notification à la CNIL sous 72h (si risque élevé)</li>
+                        <li>Information des personnes concernées (si risque élevé pour leurs droits)</li>
+                        <li>Mise en place de mesures correctives immédiates</li>
+                        <li>Documentation complète de l'incident</li>
+                    </ul>
+
+                    <h3>13.2 Contact d'urgence</h3>
+                    <div class="privacy-contact">
+                        <p><strong>En cas d'incident de sécurité :</strong></p>
+                        <p><strong>Email prioritaire :</strong> <a href="mailto:security@kyf-team.com" class="privacy-email">security@kyf-team.com</a></p>
+                        <p><strong>Réponse :</strong> sous 24h maximum</p>
+                    </div>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>14. Glossaire</h2>
+                    
+                    <table class="privacy-table">
+                        <thead>
+                            <tr>
+                                <th>Terme</th>
+                                <th>Définition</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Donnée personnelle</strong></td>
+                                <td>Toute information permettant d'identifier directement ou indirectement une personne physique</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Traitement</strong></td>
+                                <td>Toute opération sur des données : collecte, stockage, utilisation, transmission, suppression</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Responsable de traitement</strong></td>
+                                <td>Entité qui détermine les finalités et moyens du traitement (KYF Team)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sous-traitant</strong></td>
+                                <td>Entité qui traite des données pour le compte du responsable (hébergeur, etc.)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Consentement</strong></td>
+                                <td>Accord libre, spécifique, éclairé et univoque de la personne</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Anonymisation</strong></td>
+                                <td>Processus rendant impossible l'identification d'une personne</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>15. Informations de mise à jour</h2>
+                    
+                    <div class="data-retention-card">
+                        <h3>Historique des modifications</h3>
+                        <p><strong>Version actuelle :</strong> 2.0</p>
+                        <p><strong>Date de création :</strong> Janvier 2025</p>
+                        <p><strong>Dernière mise à jour :</strong> Août 2025</p>
+                        <p><strong>Prochaine révision prévue :</strong> Février 2026</p>
+                    </div>
+
+                    <h3>15.1 Principales modifications</h3>
+                    <ul>
+                        <li>Ajout de clauses spécifiques Discord</li>
+                        <li>Précision sur les cookies utilisés</li>
+                        <li>Mise à jour des durées de conservation</li>
+                        <li>Amélioration des procédures de contact</li>
+                    </ul>
+
+                    <h3>15.2 Veille réglementaire</h3>
+                    <p>Cette politique est régulièrement mise à jour pour tenir compte :</p>
+                    <ul>
+                        <li>Des évolutions de la réglementation européenne et française</li>
+                        <li>Des recommandations de la CNIL</li>
+                        <li>Des bonnes pratiques du secteur</li>
+                        <li>De l'évolution de nos services et technologies</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-contact">
+                    <h3>Contact pour toute question</h3>
+                    <p>Pour toute question concernant cette politique de confidentialité ou le traitement de vos données personnelles :</p>
+                    <p><strong>Email général :</strong> <a href="mailto:contact@kyf-team.com" class="privacy-email">contact@kyf-team.com</a></p>
+                    <p><strong>Email DPO :</strong> <a href="mailto:dpo@kyf-team.com" class="privacy-email">dpo@kyf-team.com</a></p>
+                    <p><strong>Email sécurité :</strong> <a href="mailto:security@kyf-team.com" class="privacy-email">security@kyf-team.com</a></p>
+                    <p>Nous nous engageons à vous répondre dans les meilleurs délais et à traiter votre demande avec la plus grande attention.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container" style="max-width:1200px; margin:0 auto; padding:0 1rem;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 2.5rem; text-align:center;">
+                <div style="flex:1 1 220px; min-width:220px; max-width:320px;">
+                    <p style="font-weight:bold; color:var(--accent-color); font-size:1.1rem; margin-bottom:0.5rem;">Know You'r Fear Team</p>
+                    <p style="font-size:0.95rem; color:var(--text-secondary);">Développement de jeux vidéo immersifs et solutions interactives.</p>
+                </div>
+                <div style="flex:1 1 180px; min-width:180px; max-width:260px;">
+                    <p style="font-weight:bold; color:var(--accent-color); margin-bottom:0.5rem;">Liens utiles</p>
+                    <ul style="list-style:none; padding:0; margin:0; text-align:center;">
+                        <li><a href="https://github.com/ethancthi/KnowYourFear" target="_blank" rel="noopener" style="color:var(--text-primary); text-decoration:none;">GitHub du projet</a></li>
+                        <li><a href="https://discord.gg/6kpq2Vyq" target="_blank" rel="noopener" style="color:var(--text-primary); text-decoration:none;">Discord</a></li>
+                        <li><a href="index.html#team" style="color:var(--text-primary); text-decoration:none;">Notre équipe</a></li>
+                        <li><a href="index.html#roadmap" style="color:var(--text-primary); text-decoration:none;">Roadmap</a></li>
+                        <li><a href="index.html#contact" style="color:var(--text-primary); text-decoration:none;">Contact</a></li>
+                    </ul>
+                </div>
+              <div style="flex:1 1 180px; min-width:180px; max-width:260px;">
+                <p style="font-weight:bold; color:var(--accent-color); margin-bottom:0.5rem;">Réseaux sociaux</p>
+                <div style="display:flex; gap:1.2rem; align-items:center; justify-content:center;">
+                    <a href="https://twitter.com/kyf_team" target="_blank" rel="noopener" title="Twitter" style="color:#1da1f2; font-size:1.7rem; display:flex; align-items:center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.46 5.924c-.793.352-1.646.59-2.542.698a4.48 4.48 0 0 0 1.963-2.475 8.94 8.94 0 0 1-2.828 1.082A4.48 4.48 0 0 0 16.11 4c-2.48 0-4.49 2.015-4.49 4.5 0 .353.04.697.116 1.027C7.728 9.37 4.1 7.6 1.67 4.905a4.48 4.48 0 0 0-.61 2.265c0 1.563.796 2.944 2.01 3.755a4.47 4.47 0 0 1-2.034-.563v.057c0 2.183 1.553 4.004 3.617 4.42a4.5 4.5 0 0 1-2.027.077c.572 1.785 2.23 3.084 4.195 3.12A8.98 8.98 0 0 1 2 19.54a12.67 12.67 0 0 0 6.88 2.017c8.26 0 12.78-6.84 12.78-12.77 0-.195-.004-.39-.013-.583A9.1 9.1 0 0 0 24 4.59a8.93 8.93 0 0 1-2.54.697z"></path></svg>
+                    </a>
+                    <a href="https://www.instagram.com/kyf_team" target="_blank" rel="noopener" title="Instagram" style="color:#e1306c; font-size:1.7rem; display:flex; align-items:center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm6.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@kyf_team" target="_blank" rel="noopener" title="TikTok" style="color:#fff; font-size:1.7rem; display:flex; align-items:center;">
+                        <svg width="24" height="24" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                            <path d="M33.5 6.5c.3 3.2 2.7 8.2 8.2 8.7v6.1c-2.1.2-6.1-.1-9.7-2.5v14.2c0 7.2-5.2 12.2-12.2 12.2-6.1 0-11-4.9-11-11 0-6.1 4.9-11 11-11 .6 0 1.2.1 1.8.2v6.2c-.6-.2-1.2-.3-1.8-.3-2.7 0-4.8 2.2-4.8 4.9 0 2.7 2.1 4.9 4.8 4.9 2.7 0 4.8-2.2 4.8-4.9V6.5h6.7z" fill="#fff"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@kyf_team" target="_blank" rel="noopener" title="YouTube" style="color:#ff0000; font-size:1.7rem; display:flex; align-items:center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.108-2.117C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.39.569A2.994 2.994 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.994 2.994 0 0 0 2.108 2.117C4.5 20.5 12 20.5 12 20.5s7.5 0 9.39-.569a2.994 2.994 0 0 0 2.108-2.117C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:2rem; font-size:0.85rem; color:var(--text-muted);">
+            <a href="/mentions-legales.html" style="color:var(--text-muted); text-decoration:underline;">Mentions légales</a> &nbsp;|&nbsp;
+                <a href="politique-confidentialite.html" style="color:var(--accent-color); text-decoration:underline;">Politique de confidentialité</a>
+        </div>
+        <div style="text-align:center; margin-top:1.2rem; font-size:0.95rem; color:var(--text-muted);">
+            &copy; 2025 KYF Team. Tous droits réservés.
+        </div>
+    </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+
+            // Fermer le menu en cliquant sur un lien
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Animation au scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observer les sections de confidentialité
+            const privacySections = document.querySelectorAll('.privacy-section');
+            privacySections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+
+            // Animation pour les cartes de droits
+            const rightCards = document.querySelectorAll('.right-card');
+            rightCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                card.style.transitionDelay = `${index * 0.1}s`;
+                observer.observe(card);
+            });
+
+            // Smooth scroll pour les liens internes
+            const internalLinks = document.querySelectorAll('a[href^="#"]');
+            internalLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Copie du texte des emails
+            const emailLinks = document.querySelectorAll('.privacy-email');
+            emailLinks.forEach(emailLink => {
+                emailLink.addEventListener('click', function(e) {
+                    if (this.href.startsWith('mailto:')) {
+                        const email = this.href.replace('mailto:', '');
+                        if (navigator.clipboard) {
+                            navigator.clipboard.writeText(email).then(() => {
+                                // Feedback visuel temporaire
+                                const originalText = this.textContent;
+                                this.textContent = 'Email copié !';
+                                this.style.color = 'var(--success-color)';
+                                setTimeout(() => {
+                                    this.textContent = originalText;
+                                    this.style.color = 'var(--accent-color)';
+                                }, 2000);
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script><script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales - Know You'r Fear</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques pour les mentions légales */
+        .legal-hero {
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+            padding: 8rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .legal-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(139, 0, 0, 0.1) 0%, transparent 70%);
+            animation: heroGlow 8s ease-in-out infinite;
+        }
+
+        .legal-title {
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px var(--hover-glow);
+            position: relative;
+            z-index: 2;
+        }
+
+        .legal-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .legal-content {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            border: 1px solid rgba(139, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            line-height: 1.8;
+        }
+
+        .legal-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(139, 0, 0, 0.05), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .legal-content:hover::before {
+            left: 100%;
+        }
+
+        .legal-section {
+            margin-bottom: 3rem;
+        }
+
+        .legal-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section h2 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .legal-section h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 20px;
+            background: linear-gradient(180deg, var(--accent-color), var(--accent-light));
+            border-radius: 2px;
+        }
+
+        .legal-section h3 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        .legal-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .legal-section ul {
+            color: var(--text-secondary);
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .legal-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-section strong {
+            color: var(--text-primary);
+        }
+
+        .legal-contact {
+            background: rgba(139, 0, 0, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .legal-contact h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+
+        .legal-email {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .legal-email:hover {
+            text-shadow: 0 0 10px var(--hover-glow);
+            filter: brightness(1.2);
+        }
+
+        .legal-highlight {
+            background: rgba(139, 0, 0, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(139, 0, 0, 0.2);
+            margin: 1.5rem 0;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--accent-color), var(--accent-light));
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: var(--transition);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .back-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .back-button:hover::before {
+            left: 100%;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(139, 0, 0, 0.3);
+        }
+
+        .back-arrow {
+            transition: var(--transition);
+        }
+
+        .back-button:hover .back-arrow {
+            transform: translateX(-3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .legal-title {
+                font-size: 2.5rem;
+            }
+
+            .legal-content {
+                padding: 2rem;
+                margin: 2rem 0;
+            }
+
+            .legal-section h2 {
+                font-size: 1.3rem;
+            }
+
+            .legal-contact {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .legal-hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .legal-title {
+                font-size: 2rem;
+            }
+
+            .legal-content {
+                padding: 1.5rem;
+            }
+
+            .legal-section ul {
+                margin-left: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Know You'r Fear</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#team">Équipe</a></li>
+                <li><a href="index.html#roadmap">Roadmap</a></li>
+                <li><a href="index.html#resources">Ressources</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="cdg.html">Cahiers des charges</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="legal-hero">
+        <div class="hero-particles"></div>
+        <div class="hero-fog"></div>
+        <div class="container">
+            <h1 class="legal-title">Mentions Légales</h1>
+            <p class="legal-subtitle">Informations légales et conditions d'utilisation du site Know You'r Fear</p>
+        </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <section class="section">
+        <div class="container">
+            <a href="index.html" class="back-button">
+                <span class="back-arrow">←</span>
+                Retour à l'accueil
+            </a>
+
+            <div class="legal-content">
+                <div class="legal-section">
+                    <h2>1. Informations générales</h2>
+                    <p>Le présent site web est édité par l'équipe <strong>KYF Team (Know You'r Fear Team)</strong>, une équipe de développement de jeux vidéo indépendante.</p>
+                    
+                    <div class="legal-contact">
+                        <h3>Contact</h3>
+                        <p><strong>Email :</strong> <a href="mailto:contact@kyf-team.com" class="legal-email">contact@kyf-team.com</a></p>
+                        <p><strong>Discord :</strong> <a href="https://discord.gg/6kpq2Vyq" target="_blank" class="legal-email">https://discord.gg/6kpq2Vyq</a></p>
+                    </div>
+                </div>
+
+                <div class="legal-section">
+                    <h2>2. Hébergement</h2>
+                    <p>Ce site est hébergé par des services d'hébergement web standard. Les détails techniques de l'hébergement peuvent être fournis sur demande à l'adresse email mentionnée ci-dessus.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>3. Propriété intellectuelle</h2>
+                    <p>L'ensemble des éléments constituant le site (textes, images, vidéos, logos, icônes, sons, logiciels, etc.) sont la propriété exclusive de KYF Team, sauf mention contraire.</p>
+                    
+                    <h3>3.1 Contenu du site</h3>
+                    <ul>
+                        <li>Le nom "Know You'r Fear" et le logo associé sont des marques de KYF Team</li>
+                        <li>Les contenus créatifs (concept art, descriptions, scénarios) sont protégés par le droit d'auteur</li>
+                        <li>Le code source et les algorithmes développés sont la propriété de l'équipe</li>
+                    </ul>
+
+                    <h3>3.2 Utilisation autorisée</h3>
+                    <p>La consultation du site est autorisée pour un usage personnel et non commercial. Toute reproduction, distribution, modification ou utilisation commerciale des contenus est interdite sans autorisation préalable écrite.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>4. Conditions d'utilisation</h2>
+                    
+                    <h3>4.1 Accès au site</h3>
+                    <p>L'accès au site est gratuit et ouvert à tous. KYF Team se réserve le droit de modifier, suspendre ou interrompre l'accès au site à tout moment et sans préavis.</p>
+
+                    <h3>4.2 Utilisation des services Discord</h3>
+                    <p>L'accès au serveur Discord de l'équipe est soumis aux conditions d'utilisation de Discord Inc. et aux règles spécifiques du serveur communiquées lors de l'accès.</p>
+
+                    <div class="legal-highlight">
+                        <p><strong>Important :</strong> Ce site présente un projet de jeu vidéo en cours de développement. Les informations, visuels et fonctionnalités présentés sont susceptibles d'évoluer et ne constituent pas un engagement contractuel.</p>
+                    </div>
+                </div>
+
+                <div class="legal-section">
+                    <h2>5. Protection des données personnelles</h2>
+                    
+                    <h3>5.1 Collecte de données</h3>
+                    <p>Ce site ne collecte pas directement de données personnelles via des formulaires. Cependant, des données techniques peuvent être collectées automatiquement :</p>
+                    <ul>
+                        <li>Adresse IP</li>
+                        <li>Type de navigateur et version</li>
+                        <li>Pages visitées et durée de visite</li>
+                        <li>Données de navigation (cookies techniques)</li>
+                    </ul>
+
+                    <h3>5.2 Utilisation des données</h3>
+                    <p>Les données collectées sont utilisées uniquement pour :</p>
+                    <ul>
+                        <li>Le bon fonctionnement technique du site</li>
+                        <li>L'amélioration de l'expérience utilisateur</li>
+                        <li>Les statistiques de fréquentation anonymisées</li>
+                    </ul>
+
+                    <h3>5.3 Vos droits</h3>
+                    <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
+                    <ul>
+                        <li>Droit d'accès et de rectification</li>
+                        <li>Droit à l'effacement</li>
+                        <li>Droit à la portabilité</li>
+                        <li>Droit d'opposition</li>
+                    </ul>
+                    <p>Pour exercer ces droits, contactez-nous à : <a href="mailto:contact@kyf-team.com" class="legal-email">contact@kyf-team.com</a></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>6. Cookies</h2>
+                    <p>Ce site utilise uniquement des cookies techniques nécessaires au bon fonctionnement du site. Aucun cookie de tracking ou publicitaire n'est utilisé.</p>
+                    <p>Vous pouvez configurer votre navigateur pour refuser les cookies, mais cela pourrait affecter certaines fonctionnalités du site.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>7. Liens externes</h2>
+                    <p>Le site contient des liens vers des sites externes (GitHub, Discord, réseaux sociaux). KYF Team n'est pas responsable du contenu de ces sites tiers ni de leurs pratiques en matière de protection des données.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>8. Responsabilité</h2>
+                    <p>KYF Team s'efforce de maintenir des informations exactes et à jour sur ce site, mais ne peut garantir l'exactitude, la complétude ou l'actualité des informations fournies.</p>
+                    
+                    <div class="legal-highlight">
+                        <p><strong>Limitation de responsabilité :</strong> KYF Team ne pourra être tenu responsable des dommages directs ou indirects résultant de l'utilisation de ce site ou de l'impossibilité de l'utiliser.</p>
+                    </div>
+                </div>
+
+                <div class="legal-section">
+                    <h2>9. Droit applicable</h2>
+                    <p>Les présentes mentions légales sont soumises au droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>10. Modifications</h2>
+                    <p>KYF Team se réserve le droit de modifier les présentes mentions légales à tout moment. Les modifications prennent effet dès leur publication sur le site.</p>
+                    <p><strong>Dernière mise à jour :</strong> Août 2025</p>
+                </div>
+
+                <div class="legal-contact">
+                    <h3>Contact pour toute question juridique</h3>
+                    <p>Pour toute question concernant ces mentions légales ou l'utilisation de vos données personnelles, vous pouvez nous contacter à :</p>
+                    <p><strong>Email :</strong> <a href="mailto:contact@kyf-team.com" class="legal-email">contact@kyf-team.com</a></p>
+                    <p>Nous nous engageons à vous répondre dans les meilleurs délais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container" style="max-width:1200px; margin:0 auto; padding:0 1rem;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 2.5rem; text-align:center;">
+                <div style="flex:1 1 220px; min-width:220px; max-width:320px;">
+                    <p style="font-weight:bold; color:var(--accent-color); font-size:1.1rem; margin-bottom:0.5rem;">Know You'r Fear Team</p>
+                    <p style="font-size:0.95rem; color:var(--text-secondary);">Développement de jeux vidéo immersifs et solutions interactives.</p>
+                </div>
+                <div style="flex:1 1 180px; min-width:180px; max-width:260px;">
+                    <p style="font-weight:bold; color:var(--accent-color); margin-bottom:0.5rem;">Liens utiles</p>
+                    <ul style="list-style:none; padding:0; margin:0; text-align:center;">
+                        <li><a href="https://github.com/ethancthi/KnowYourFear" target="_blank" rel="noopener" style="color:var(--text-primary); text-decoration:none;">GitHub du projet</a></li>
+                        <li><a href="https://discord.gg/6kpq2Vyq" target="_blank" rel="noopener" style="color:var(--text-primary); text-decoration:none;">Discord</a></li>
+                        <li><a href="index.html#team" style="color:var(--text-primary); text-decoration:none;">Notre équipe</a></li>
+                        <li><a href="index.html#roadmap" style="color:var(--text-primary); text-decoration:none;">Roadmap</a></li>
+                        <li><a href="index.html#contact" style="color:var(--text-primary); text-decoration:none;">Contact</a></li>
+                    </ul>
+                </div>
+                <div style="flex:1 1 180px; min-width:180px; max-width:260px;">
+                <p style="font-weight:bold; color:var(--accent-color); margin-bottom:0.5rem;">Réseaux sociaux</p>
+                <div style="display:flex; gap:1.2rem; align-items:center; justify-content:center;">
+                    <a href="https://twitter.com/kyf_team" target="_blank" rel="noopener" title="Twitter" style="color:#1da1f2; font-size:1.7rem; display:flex; align-items:center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.46 5.924c-.793.352-1.646.59-2.542.698a4.48 4.48 0 0 0 1.963-2.475 8.94 8.94 0 0 1-2.828 1.082A4.48 4.48 0 0 0 16.11 4c-2.48 0-4.49 2.015-4.49 4.5 0 .353.04.697.116 1.027C7.728 9.37 4.1 7.6 1.67 4.905a4.48 4.48 0 0 0-.61 2.265c0 1.563.796 2.944 2.01 3.755a4.47 4.47 0 0 1-2.034-.563v.057c0 2.183 1.553 4.004 3.617 4.42a4.5 4.5 0 0 1-2.027.077c.572 1.785 2.23 3.084 4.195 3.12A8.98 8.98 0 0 1 2 19.54a12.67 12.67 0 0 0 6.88 2.017c8.26 0 12.78-6.84 12.78-12.77 0-.195-.004-.39-.013-.583A9.1 9.1 0 0 0 24 4.59a8.93 8.93 0 0 1-2.54.697z"></path></svg>
+                    </a>
+                    <a href="https://www.instagram.com/kyf_team" target="_blank" rel="noopener" title="Instagram" style="color:#e1306c; font-size:1.7rem; display:flex; align-items:center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm6.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@kyf_team" target="_blank" rel="noopener" title="TikTok" style="color:#fff; font-size:1.7rem; display:flex; align-items:center;">
+                        <svg width="24" height="24" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                            <path d="M33.5 6.5c.3 3.2 2.7 8.2 8.2 8.7v6.1c-2.1.2-6.1-.1-9.7-2.5v14.2c0 7.2-5.2 12.2-12.2 12.2-6.1 0-11-4.9-11-11 0-6.1 4.9-11 11-11 .6 0 1.2.1 1.8.2v6.2c-.6-.2-1.2-.3-1.8-.3-2.7 0-4.8 2.2-4.8 4.9 0 2.7 2.1 4.9 4.8 4.9 2.7 0 4.8-2.2 4.8-4.9V6.5h6.7z" fill="#fff"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@kyf_team" target="_blank" rel="noopener" title="YouTube" style="color:#ff0000; font-size:1.7rem; display:flex; align-items:center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.108-2.117C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.39.569A2.994 2.994 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.994 2.994 0 0 0 2.108 2.117C4.5 20.5 12 20.5 12 20.5s7.5 0 9.39-.569a2.994 2.994 0 0 0 2.108-2.117C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:2rem; font-size:0.85rem; color:var(--text-muted);">
+            <a href="politique-confidentialite.html" style="color:var(--accent-color); text-decoration:underline;">Mentions légales</a> &nbsp;|&nbsp;
+            <a href="/politique-confidentialite.html" style="color:var(--text-muted); text-decoration:underline;">Politique de confidentialité</a>
+        </div>
+        <div style="text-align:center; margin-top:1.2rem; font-size:0.95rem; color:var(--text-muted);">
+            &copy; 2025 KYF Team. Tous droits réservés.
+        </div>
+    </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+
+            // Fermer le menu en cliquant sur un lien
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Animation au scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observer les sections légales
+            const legalSections = document.querySelectorAll('.legal-section');
+            legalSections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        });
+    </script><script src="script.js"></script>
+</body>
+</html>

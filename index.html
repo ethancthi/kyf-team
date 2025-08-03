@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know You'r Fear - Équipe de développement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Know You'r Fear</div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#team">Équipe</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#resources">Ressources</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="cdg.html">Cahiers des charges</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-particles"></div>
+        <div class="hero-fog"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-word">Know</span>
+                <span class="title-word">You'r</span>
+                <span class="title-word">Fear</span>
+            </h1>
+            <p class="hero-tagline">
+                <span class="tagline-part">Affronte tes peurs.</span>
+                <span class="tagline-part">Organise ton équipe.</span>
+                <span class="tagline-part">Crée l'inoubliable.</span>
+            </p>
+            <div class="hero-cta">
+                <a href="#team" class="cta-button">
+                    <span class="btn-text">Découvrir l'équipe</span>
+                    <span class="btn-glow"></span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-bg-animation"></div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+        <div class="section-bg-effect"></div>
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-line"></span>
+                Notre Équipe
+                <span class="title-line"></span>
+            </h2>
+            <div class="team-grid">
+                <div class="team-card" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="card-avatar">
+                        <div class="avatar-ring"></div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcT2Xcrp6Wgm2qjlFVr_v_hugcI7Bs4s0u4rMUvdKsStfx5pQX" alt="Manager">
+                        <div class="avatar-pulse"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-name">EHN</h3>
+                        <p class="card-role">Manager</p>
+                        <p class="card-bio">Créateur de l'univers terrifiant de Know You'r Fear. Spécialisé dans les mécaniques de jeu psychologiques.</p>
+                    </div>
+                </div>
+
+                <div class="team-card" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="card-avatar">
+                        <div class="avatar-ring"></div>
+                        <img src="https://preview.redd.it/a-night-out-with-vanilla-by-constellor-v0-nt2vevs1dvmd1.jpeg?width=736&format=pjpg&auto=webp&s=b2e4d4f85ddd253b251d49cae271f8c78ed16f9f" alt="Scénariste">
+                        <div class="avatar-pulse"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-name">Starex</h3>
+                        <p class="card-role">Scénariste</p>
+                        <p class="card-bio">Expert en Scénario. Transforme les idées les plus sombres en scénario réaliste.</p>
+                    </div>
+                </div>
+
+                <div class="team-card" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="card-avatar">
+                        <div class="avatar-ring"></div>
+                        <img src="https://www.stampaprint.fr/blog/wp-content/uploads/2016/06/google-logo-lettera-2016.jpg" alt="Artiste">
+                        <div class="avatar-pulse"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-name">Google</h3>
+                        <p class="card-role">Artiste 3D</p>
+                        <p class="card-bio">Créateur d'environnements oppressants et de modèles 3D qui donnent froid dans le dos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="section section-dark">
+        <div class="section-bg-effect"></div>
+        <div class="floating-orbs">
+            <div class="orb"></div>
+            <div class="orb"></div>
+            <div class="orb"></div>
+        </div>
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-line"></span>
+                Roadmap du Projet
+                <span class="title-line"></span>
+            </h2>
+            <div class="timeline">
+                <div class="timeline-progress"></div>
+                <div class="timeline-item completed" data-animate>
+                    <div class="timeline-marker">
+                        <div class="marker-pulse"></div>
+                        <span class="marker-icon">✓</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="content-glow"></div>
+                        <h3>Conception & Prototype</h3>
+                        <p>Définition des mécaniques de base et création du premier prototype jouable.</p>
+                        <span class="timeline-status completed">Terminé</span>
+                        <div class="timeline-date">Janvier 2025</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item in-progress" data-animate>
+                    <div class="timeline-marker">
+                        <div class="marker-pulse"></div>
+                        <span class="marker-icon">⚡</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="content-glow"></div>
+                        <h3>Assets & Environnements</h3>
+                        <p>Création des modèles 3D, textures et environnements principaux du jeu.</p>
+                        <span class="timeline-status in-progress">En cours</span>
+                        <div class="timeline-date">Février 2025</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item pending" data-animate>
+                    <div class="timeline-marker">
+                        <div class="marker-pulse"></div>
+                        <span class="marker-icon">🧠</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="content-glow"></div>
+                        <h3>Système de Peurs</h3>
+                        <p>Implémentation du système central de détection et adaptation aux peurs du joueur.</p>
+                        <span class="timeline-status pending">À faire</span>
+                        <div class="timeline-date">Mars 2025</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item pending" data-animate>
+                    <div class="timeline-marker">
+                        <div class="marker-pulse"></div>
+                        <span class="marker-icon">🎵</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="content-glow"></div>
+                        <h3>Audio & Ambiances</h3>
+                        <p>Intégration complète du design sonore et des musiques adaptatives.</p>
+                        <span class="timeline-status pending">À faire</span>
+                        <div class="timeline-date">Avril 2025</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item pending" data-animate>
+                    <div class="timeline-marker">
+                        <div class="marker-pulse"></div>
+                        <span class="marker-icon">🏆</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="content-glow"></div>
+                        <h3>Tests & Polish</h3>
+                        <p>Phase de tests utilisateurs, optimisation et peaufinage final.</p>
+                        <span class="timeline-status pending">À faire</span>
+                        <div class="timeline-date">Mai 2025</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="section">
+        <div class="container">
+            <h2 class="section-title">Ressources Partagées</h2>
+            <div class="resources-grid">
+                <a href="#" class="resource-card">
+                    <div class="resource-icon">📁</div>
+                    <h3>Google Drive</h3>
+                    <p>Stockage partagé des assets, documents et fichiers de travail</p>
+                </a>
+
+                <a href="#" class="resource-card">
+                    <div class="resource-icon">📋</div>
+                    <h3>Notion</h3>
+                    <p>Documentation technique, wiki du projet et spécifications</p>
+                </a>
+
+                <a href="#" class="resource-card">
+                    <div class="resource-icon">🔧</div>
+                    <h3>GitHub</h3>
+                    <p>Gestion de version du code source et collaboration</p>
+                </a>
+
+                <a href="#" class="resource-card">
+                    <div class="resource-icon">📊</div>
+                    <h3>Trello</h3>
+                    <p>Gestion des tâches et suivi de l'avancement quotidien</p>
+                </a>
+
+                <a href="#" class="resource-card">
+                    <div class="resource-icon">🎨</div>
+                    <h3>Figma</h3>
+                    <p>Maquettes, concepts art et design d'interface</p>
+                </a>
+
+                <a href="#" class="resource-card">
+                    <div class="resource-icon">🎮</div>
+                    <h3>Unity Cloud</h3>
+                    <p>Build automatisés et versions de test du jeu</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Rejoindre l'équipe</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Discord de l'équipe</h3>
+                    <p>Rejoignez notre serveur Discord pour suivre le développement en temps réel et participer aux discussions.</p>
+                    <div class="discord-invite">
+                        <code id="discordLink">https://discord.gg/6kpq2Vyq</code>
+                        <button id="copyDiscord" class="copy-btn">Copier</button>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <a href="https://discord.gg/6kpq2Vyq" class="cta-button">Rejoindre Discord</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+    <div class="container" style="max-width:1200px; margin:0 auto; padding:0 1rem;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 2.5rem; text-align:center;">
+            <div style="flex:1 1 220px; min-width:220px; max-width:320px;">
+                <p style="font-weight:bold; color:var(--accent-color); font-size:1.1rem; margin-bottom:0.5rem;">Know You'r Fear Team</p>
+                <p style="font-size:0.95rem; color:var(--text-secondary);">Développement de jeux vidéo immersifs et solutions interactives.</p>
+            </div>
+            <div style="flex:1 1 180px; min-width:180px; max-width:260px;">
+                <p style="font-weight:bold; color:var(--accent-color); margin-bottom:0.5rem;">Liens utiles</p>
+                <ul style="list-style:none; padding:0; margin:0; text-align:center;">
+                    <li><a href="https://github.com/ethancthi/KnowYourFear" target="_blank" rel="noopener" style="color:var(--text-primary); text-decoration:none;">GitHub du projet</a></li>
+                    <li><a href="https://discord.gg/6kpq2Vyq" target="_blank" rel="noopener" style="color:var(--text-primary); text-decoration:none;">Discord</a></li>
+                    <li><a href="#team" style="color:var(--text-primary); text-decoration:none;">Notre équipe</a></li>
+                    <li><a href="#roadmap" style="color:var(--text-primary); text-decoration:none;">Roadmap</a></li>
+                    <li><a href="#contact" style="color:var(--text-primary); text-decoration:none;">Contact</a></li>
+                </ul>
+            </div>
+            <div style="flex:1 1 180px; min-width:180px; max-width:260px;">
+                <p style="font-weight:bold; color:var(--accent-color); margin-bottom:0.5rem;">Contact professionnel</p>
+                <p style="font-size:0.95rem; color:var(--text-secondary); margin-bottom:0.3rem;">Mail : <a href="mailto:contact@kyf-team.com" style="color:var(--accent-color); text-decoration:none;">contact@kyf-team.com</a></p>
+            </div>
+            <div style="flex:1 1 180px; min-width:180px; max-width:260px;">
+                <p style="font-weight:bold; color:var(--accent-color); margin-bottom:0.5rem;">Réseaux sociaux</p>
+                <div style="display:flex; gap:1.2rem; align-items:center; justify-content:center;">
+                    <a href="https://twitter.com/kyf_team" target="_blank" rel="noopener" title="Twitter" style="color:#1da1f2; font-size:1.7rem; display:flex; align-items:center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.46 5.924c-.793.352-1.646.59-2.542.698a4.48 4.48 0 0 0 1.963-2.475 8.94 8.94 0 0 1-2.828 1.082A4.48 4.48 0 0 0 16.11 4c-2.48 0-4.49 2.015-4.49 4.5 0 .353.04.697.116 1.027C7.728 9.37 4.1 7.6 1.67 4.905a4.48 4.48 0 0 0-.61 2.265c0 1.563.796 2.944 2.01 3.755a4.47 4.47 0 0 1-2.034-.563v.057c0 2.183 1.553 4.004 3.617 4.42a4.5 4.5 0 0 1-2.027.077c.572 1.785 2.23 3.084 4.195 3.12A8.98 8.98 0 0 1 2 19.54a12.67 12.67 0 0 0 6.88 2.017c8.26 0 12.78-6.84 12.78-12.77 0-.195-.004-.39-.013-.583A9.1 9.1 0 0 0 24 4.59a8.93 8.93 0 0 1-2.54.697z"></path></svg>
+                    </a>
+                    <a href="https://www.instagram.com/kyf_team" target="_blank" rel="noopener" title="Instagram" style="color:#e1306c; font-size:1.7rem; display:flex; align-items:center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm6.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@kyf_team" target="_blank" rel="noopener" title="TikTok" style="color:#fff; font-size:1.7rem; display:flex; align-items:center;">
+                        <svg width="24" height="24" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                            <path d="M33.5 6.5c.3 3.2 2.7 8.2 8.2 8.7v6.1c-2.1.2-6.1-.1-9.7-2.5v14.2c0 7.2-5.2 12.2-12.2 12.2-6.1 0-11-4.9-11-11 0-6.1 4.9-11 11-11 .6 0 1.2.1 1.8.2v6.2c-.6-.2-1.2-.3-1.8-.3-2.7 0-4.8 2.2-4.8 4.9 0 2.7 2.1 4.9 4.8 4.9 2.7 0 4.8-2.2 4.8-4.9V6.5h6.7z" fill="#fff"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@kyf_team" target="_blank" rel="noopener" title="YouTube" style="color:#ff0000; font-size:1.7rem; display:flex; align-items:center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.108-2.117C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.39.569A2.994 2.994 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.994 2.994 0 0 0 2.108 2.117C4.5 20.5 12 20.5 12 20.5s7.5 0 9.39-.569a2.994 2.994 0 0 0 2.108-2.117C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:2rem; font-size:0.85rem; color:var(--text-muted);">
+            <a href="mentions-legales.html" style="color:var(--text-muted); text-decoration:underline;">Mentions légales</a> &nbsp;|&nbsp;
+            <a href="politique-confidentialite.html" style="color:var(--text-muted); text-decoration:underline;">Politique de confidentialité</a>
+        </div>
+        <div style="text-align:center; margin-top:1.2rem; font-size:0.95rem; color:var(--text-muted);">
+            &copy; 2025 KYF Team. Tous droits réservés.
+        </div>
+    </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    // Supprime l'état :hover/:active sur les liens du footer après clic
+    document.addEventListener('DOMContentLoaded', function() {
+      const footer = document.querySelector('.footer');
+      if (!footer) return;
+      footer.querySelectorAll('a').forEach(link => {
+        link.addEventListener('mousedown', function(e) {
+          // Pour forcer la perte de l'état :hover/:active
+          this.blur();
+        });
+        link.addEventListener('click', function(e) {
+          this.blur();
+        });
+      });
+    });
+    </script>
+</body>
+</html>
